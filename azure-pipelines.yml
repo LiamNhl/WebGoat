@@ -20,7 +20,7 @@ steps:
     echo See https://aka.ms/yaml
 - task: FortifyScanCentralSAST@7
   inputs:
-    scanCentralCtrlUrl: 'https://192.168.68.124:8085/scancentral-ctrl/'
+    scanCentralCtrlUrl: 'http://192.168.68.124:8085/scancentral-ctrl/'
     scanCentralClientToken: '$(ScanCentral.ClientToken)'
     sscUrl: 'http://192.168.68.124:8084/ssc/'
     sscCiToken: '$(ScanCentral.SscCiToken)'
