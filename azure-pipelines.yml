@@ -4,11 +4,18 @@ trigger:
 pool:
   name: DSO
 
+variables:
+- group: FortifySecrets
+
 steps:
+- checkout: self
+
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
 - script: |
+    pwd
+    ls
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
 - task: FortifyScanCentralSAST@7
